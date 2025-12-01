@@ -108,9 +108,9 @@ Clusters users into 4 behavioral segments based on:
 ### Model Performance
 | Model | AUC | Precision | Recall | F1-Score |
 |-------|-----|-----------|--------|----------|
-| Logistic Regression | ~0.XX | ~0.XX | ~0.XX | ~0.XX |
-| Random Forest | ~0.XX | ~0.XX | ~0.XX | ~0.XX |
-| XGBoost | ~0.XX | ~0.XX | ~0.XX | ~0.XX |
+| Logistic Regression | 0.5824 | 0.4888 | 0.2352 | 0.3176 |
+| Random Forest | 0.5418 | 0.4825 | 0.3854 | 0.4285 |
+| XGBoost | 0.5621 | 0.4838 | 0.3814 | 0.4265 |
 
 *Run the notebook to see actual performance metrics*
 
@@ -192,3 +192,4 @@ FILE_PATH = "path/to/your/Spotify_user_research.xlsx"
 - [ ] Cohort analysis for long-term LTV prediction
 - [ ] Regional customization (India-specific preferences)
 - [ ] Real-time deployment pipeline with FastAPI
+
