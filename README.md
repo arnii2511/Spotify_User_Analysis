@@ -21,16 +21,21 @@ Music streaming platforms like JioSaavn and Spotify rely on converting free user
 - **Pricing Strategy**: Tailor subscription offers by user segment and age group
 - **Revenue Forecasting**: Predict upgrade rates and ARPU (Average Revenue Per User) growth
 
-## Project Structure
+## Project Structure - Spotify_User_Analysis
 
 ```
-spotify-analysis/
-├── music-analysis.ipynb              # Main analysis notebook
-├── Spotify_user_research.xlsx        # Source data (user research)
-├── spotify_cleaned.csv               # Cleaned data snapshot
-├── spotify_cleaned_final.csv         # Final dataset with segments
-├── viz_*.png                         # Generated visualizations
-└── README.md                         # This file
+main/
+├── music-analysis.ipynb                                 # Main analysis notebook
+├── Spotify_user_research.xlsx                           # Source data (user research)
+├── spotify_cleaned.csv                                  # Cleaned data snapshot
+├── spotify_cleaned_final.csv                            # Final dataset with segments
+├── viz_*.png                                            # Generated visualizations
+└── README.md                                            # This file
+dashboard/
+├── Book1.twb                                            # Main tableau book storing the dashboard
+├── Tableau DashBoard - Audio Market Analysis.png        # DashBoard Image
+├── Tableau DashBoard Description                        # DashBoard Description                   
+└── README.md                                            # This file
 ```
 
 ## Dataset
@@ -192,4 +197,5 @@ FILE_PATH = "path/to/your/Spotify_user_research.xlsx"
 - [ ] Cohort analysis for long-term LTV prediction
 - [ ] Regional customization (India-specific preferences)
 - [ ] Real-time deployment pipeline with FastAPI
+
 
