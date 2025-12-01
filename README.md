@@ -177,7 +177,7 @@ FILE_PATH = "path/to/your/Spotify_user_research.xlsx"
 - Value labels on charts
 - PCA dimensionality reduction for cluster visualization
 
-## Recommendations for JioSaavn
+## Recommendations
 
 1. **Priority Segment**: Target users with high recommendation ratings + high listening frequency
 2. **Product Focus**: Invest in recommendation algorithm quality (strongest conversion driver)
@@ -192,4 +192,5 @@ FILE_PATH = "path/to/your/Spotify_user_research.xlsx"
 - [ ] Cohort analysis for long-term LTV prediction
 - [ ] Regional customization (India-specific preferences)
 - [ ] Real-time deployment pipeline with FastAPI
+
 
