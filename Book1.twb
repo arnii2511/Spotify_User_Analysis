@@ -1,0 +1,1580 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='spotify_cleaned' inline='true' name='federated.1xeyded0ma2om11d6i3dn0w7z5kn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='spotify_cleaned_final' name='textscan.0puqi9l0a2ucrf1cuh8qh1g74kqj'>
+            <connection class='textscan' directory='D:/spotify-analysis' filename='spotify_cleaned_final.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0puqi9l0a2ucrf1cuh8qh1g74kqj' name='spotify_cleaned_final.csv' table='[spotify_cleaned_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Age' ordinal='0' />
+            <column datatype='string' name='Gender' ordinal='1' />
+            <column datatype='string' name='spotify_usage_period' ordinal='2' />
+            <column datatype='string' name='spotify_listening_device' ordinal='3' />
+            <column datatype='string' name='spotify_subscription_plan' ordinal='4' />
+            <column datatype='string' name='premium_sub_willingness' ordinal='5' />
+            <column datatype='string' name='preffered_premium_plan' ordinal='6' />
+            <column datatype='string' name='preferred_listening_content' ordinal='7' />
+            <column datatype='string' name='fav_music_genre' ordinal='8' />
+            <column datatype='string' name='music_time_slot' ordinal='9' />
+            <column datatype='string' name='music_Influencial_mood' ordinal='10' />
+            <column datatype='string' name='music_lis_frequency' ordinal='11' />
+            <column datatype='string' name='music_expl_method' ordinal='12' />
+            <column datatype='integer' name='music_recc_rating' ordinal='13' />
+            <column datatype='string' name='pod_lis_frequency' ordinal='14' />
+            <column datatype='string' name='fav_pod_genre' ordinal='15' />
+            <column datatype='string' name='preffered_pod_format' ordinal='16' />
+            <column datatype='string' name='pod_host_preference' ordinal='17' />
+            <column datatype='string' name='preffered_pod_duration' ordinal='18' />
+            <column datatype='string' name='pod_variety_satisfaction' ordinal='19' />
+            <column datatype='integer' name='premium_yes' ordinal='20' />
+            <column datatype='string' name='plan' ordinal='21' />
+            <column datatype='string' name='primary_genre' ordinal='22' />
+            <column datatype='integer' name='segment' ordinal='23' />
+            <column datatype='string' name='segment_label' ordinal='24' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spotify_usage_period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[spotify_usage_period]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>spotify_usage_period</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spotify_listening_device</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[spotify_listening_device]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>spotify_listening_device</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spotify_subscription_plan</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[spotify_subscription_plan]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>spotify_subscription_plan</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>premium_sub_willingness</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[premium_sub_willingness]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>premium_sub_willingness</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>preffered_premium_plan</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[preffered_premium_plan]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>preffered_premium_plan</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>preferred_listening_content</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[preferred_listening_content]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>preferred_listening_content</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fav_music_genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fav_music_genre]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>fav_music_genre</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>music_time_slot</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[music_time_slot]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>music_time_slot</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>music_Influencial_mood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[music_Influencial_mood]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>music_Influencial_mood</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>music_lis_frequency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[music_lis_frequency]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>music_lis_frequency</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>music_expl_method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[music_expl_method]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>music_expl_method</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>music_recc_rating</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[music_recc_rating]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>music_recc_rating</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pod_lis_frequency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pod_lis_frequency]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>pod_lis_frequency</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fav_pod_genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fav_pod_genre]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>fav_pod_genre</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>preffered_pod_format</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[preffered_pod_format]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>preffered_pod_format</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pod_host_preference</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pod_host_preference]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>pod_host_preference</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>preffered_pod_duration</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[preffered_pod_duration]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>preffered_pod_duration</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pod_variety_satisfaction</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pod_variety_satisfaction]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>pod_variety_satisfaction</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>premium_yes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[premium_yes]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>premium_yes</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>plan</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[plan]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>plan</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_genre]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>primary_genre</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>segment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[segment]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>segment</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>segment_label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[segment_label]</local-name>
+            <parent-name>[spotify_cleaned_final.csv]</parent-name>
+            <remote-alias>segment_label</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age1' datatype='string' name='[Age]' role='dimension' type='nominal' />
+      <column caption='Premium Conversion Rate' datatype='real' name='[Calculation_2104588413124972544]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([premium_yes])' />
+      </column>
+      <column caption='Rec Rating Group' datatype='string' name='[Calculation_2104588413125214209]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [music_recc_rating] &gt;= 4 THEN &apos;High (4-5)&apos; ELSE &apos;Low/Neutral (1-3)&apos; END' />
+      </column>
+      <column caption='Mobile Dominance' datatype='string' name='[Calculation_2104588413125349378]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF CONTAINS([spotify_listening_device], &apos;Smartphone&apos;) OR CONTAINS([spotify_listening_device], &apos;mobile&apos;) THEN &apos;Mobile User&apos; ELSE &apos;Other/Desktop&apos; END' />
+      </column>
+      <column caption='Number of Records' datatype='integer' name='[Calculation_2104588413140393988]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT(1)' />
+      </column>
+      <column caption='spotify_cleaned_final.csv' datatype='table' name='[__tableau_internal_object_id__].[spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995]' role='measure' type='quantitative' />
+      <column caption='Fav Music Genre' datatype='string' name='[fav_music_genre]' role='dimension' type='nominal' />
+      <column caption='Fav Pod Genre' datatype='string' name='[fav_pod_genre]' role='dimension' type='nominal' />
+      <column caption='music Influencial mood' datatype='string' name='[music_Influencial_mood]' role='dimension' type='nominal' />
+      <column caption='Music Expl Method' datatype='string' name='[music_expl_method]' role='dimension' type='nominal' />
+      <column caption='Music Lis Frequency' datatype='string' name='[music_lis_frequency]' role='dimension' type='nominal' />
+      <column caption='Music Recc Rating' datatype='integer' name='[music_recc_rating]' role='measure' type='quantitative' />
+      <column caption='Music Time Slot' datatype='string' name='[music_time_slot]' role='dimension' type='nominal' />
+      <column caption='Plan' datatype='string' name='[plan]' role='dimension' type='nominal' />
+      <column caption='Pod Host Preference' datatype='string' name='[pod_host_preference]' role='dimension' type='nominal' />
+      <column caption='Pod Lis Frequency' datatype='string' name='[pod_lis_frequency]' role='dimension' type='nominal' />
+      <column caption='Pod Variety Satisfaction' datatype='string' name='[pod_variety_satisfaction]' role='dimension' type='nominal' />
+      <column caption='Preferred Listening Content' datatype='string' name='[preferred_listening_content]' role='dimension' type='nominal' />
+      <column caption='Preffered Pod Duration' datatype='string' name='[preffered_pod_duration]' role='dimension' type='nominal' />
+      <column caption='Preffered Pod Format' datatype='string' name='[preffered_pod_format]' role='dimension' type='nominal' />
+      <column caption='Preffered Premium Plan' datatype='string' name='[preffered_premium_plan]' role='dimension' type='nominal' />
+      <column caption='Premium Sub Willingness' datatype='string' name='[premium_sub_willingness]' role='dimension' type='nominal' />
+      <column caption='Premium Yes' datatype='integer' name='[premium_yes]' role='measure' type='quantitative' />
+      <column caption='Primary Genre' datatype='string' name='[primary_genre]' role='dimension' type='nominal' />
+      <column caption='Segment' datatype='integer' name='[segment]' role='measure' type='quantitative' />
+      <column caption='Segment Label' datatype='string' name='[segment_label]' role='dimension' type='nominal' />
+      <column caption='Spotify Listening Device' datatype='string' name='[spotify_listening_device]' role='dimension' type='nominal' />
+      <column caption='Spotify Subscription Plan' datatype='string' name='[spotify_subscription_plan]' role='dimension' type='nominal' />
+      <column caption='Spotify Usage Period' datatype='string' name='[spotify_usage_period]' role='dimension' type='nominal' />
+      <column-instance column='[music_time_slot]' derivation='None' name='[none:music_time_slot:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:music_time_slot:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Afternoon&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Night&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Morning&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Evening&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Age' />
+        <field-sort-custom-order field='Gender' />
+        <field-sort-custom-order field='spotify_usage_period' />
+        <field-sort-custom-order field='spotify_listening_device' />
+        <field-sort-custom-order field='spotify_subscription_plan' />
+        <field-sort-custom-order field='premium_sub_willingness' />
+        <field-sort-custom-order field='preffered_premium_plan' />
+        <field-sort-custom-order field='preferred_listening_content' />
+        <field-sort-custom-order field='fav_music_genre' />
+        <field-sort-custom-order field='music_time_slot' />
+        <field-sort-custom-order field='music_Influencial_mood' />
+        <field-sort-custom-order field='music_lis_frequency' />
+        <field-sort-custom-order field='music_expl_method' />
+        <field-sort-custom-order field='music_recc_rating' />
+        <field-sort-custom-order field='pod_lis_frequency' />
+        <field-sort-custom-order field='fav_pod_genre' />
+        <field-sort-custom-order field='preffered_pod_format' />
+        <field-sort-custom-order field='pod_host_preference' />
+        <field-sort-custom-order field='preffered_pod_duration' />
+        <field-sort-custom-order field='pod_variety_satisfaction' />
+        <field-sort-custom-order field='premium_yes' />
+        <field-sort-custom-order field='Calculation_2104588413124972544' />
+        <field-sort-custom-order field='plan' />
+        <field-sort-custom-order field='Calculation_2104588413125349378' />
+        <field-sort-custom-order field='Calculation_2104588413125214209' />
+        <field-sort-custom-order field='primary_genre' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='spotify_cleaned_final.csv' id='spotify_cleaned_final.csv_7054E0472922437194412C11AFD1E995'>
+            <properties context=''>
+              <relation connection='textscan.0puqi9l0a2ucrf1cuh8qh1g74kqj' name='spotify_cleaned_final.csv' table='[spotify_cleaned_final#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Age' ordinal='0' />
+                  <column datatype='string' name='Gender' ordinal='1' />
+                  <column datatype='string' name='spotify_usage_period' ordinal='2' />
+                  <column datatype='string' name='spotify_listening_device' ordinal='3' />
+                  <column datatype='string' name='spotify_subscription_plan' ordinal='4' />
+                  <column datatype='string' name='premium_sub_willingness' ordinal='5' />
+                  <column datatype='string' name='preffered_premium_plan' ordinal='6' />
+                  <column datatype='string' name='preferred_listening_content' ordinal='7' />
+                  <column datatype='string' name='fav_music_genre' ordinal='8' />
+                  <column datatype='string' name='music_time_slot' ordinal='9' />
+                  <column datatype='string' name='music_Influencial_mood' ordinal='10' />
+                  <column datatype='string' name='music_lis_frequency' ordinal='11' />
+                  <column datatype='string' name='music_expl_method' ordinal='12' />
+                  <column datatype='integer' name='music_recc_rating' ordinal='13' />
+                  <column datatype='string' name='pod_lis_frequency' ordinal='14' />
+                  <column datatype='string' name='fav_pod_genre' ordinal='15' />
+                  <column datatype='string' name='preffered_pod_format' ordinal='16' />
+                  <column datatype='string' name='pod_host_preference' ordinal='17' />
+                  <column datatype='string' name='preffered_pod_duration' ordinal='18' />
+                  <column datatype='string' name='pod_variety_satisfaction' ordinal='19' />
+                  <column datatype='integer' name='premium_yes' ordinal='20' />
+                  <column datatype='string' name='plan' ordinal='21' />
+                  <column datatype='string' name='primary_genre' ordinal='22' />
+                  <column datatype='integer' name='segment' ordinal='23' />
+                  <column datatype='string' name='segment_label' ordinal='24' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_E1813E827CE74161B0F11F24187E8AE8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Premium Conversion Levers' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Music Time Slot' />
+        <param name='target' value='Premium Conversion Levers' />
+      </command>
+    </action>
+    <action caption='Highlight 2 (generated)' name='[Action2_D0EADF8AD0F64604AA6FD6DE41BC7609]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Audio Market Analysis' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Music Time Slot' />
+        <param name='target' value='Audio Market Analysis' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Content &amp; Product'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='spotify_cleaned' name='federated.1xeyded0ma2om11d6i3dn0w7z5kn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xeyded0ma2om11d6i3dn0w7z5kn'>
+            <column caption='Mobile Dominance' datatype='string' name='[Calculation_2104588413125349378]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([spotify_listening_device], &apos;Smartphone&apos;) OR CONTAINS([spotify_listening_device], &apos;mobile&apos;) THEN &apos;Mobile User&apos; ELSE &apos;Other/Desktop&apos; END' />
+            </column>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_2104588413140393988]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT(1)' />
+            </column>
+            <column-instance column='[Calculation_2104588413125349378]' derivation='None' name='[none:Calculation_2104588413125349378:nk]' pivot='key' type='nominal' />
+            <column-instance column='[primary_genre]' derivation='None' name='[none:primary_genre:nk]' pivot='key' type='nominal' />
+            <column caption='Primary Genre' datatype='string' name='[primary_genre]' role='dimension' type='nominal' />
+            <column caption='Spotify Listening Device' datatype='string' name='[spotify_listening_device]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2104588413140393988]' derivation='User' name='[usr:Calculation_2104588413140393988:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:primary_genre:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='[Calculation_2104588413140393988]' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;All&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Classical&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Classical &amp; Melody&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Electronic/Dance&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Jazz&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Kpop&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Melody&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Old Songs&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Pop&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Rap&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Rock&quot;' />
+                  <groupfilter function='member' level='[none:primary_genre:nk]' member='&quot;Trending Songs Random&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:primary_genre:nk]' direction='DESC' using='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[usr:Calculation_2104588413140393988:qk]' />
+          <slices>
+            <column>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:primary_genre:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]' />
+              <size column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]' />
+              <text column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[usr:Calculation_2104588413140393988:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[usr:Calculation_2104588413140393988:qk]</rows>
+        <cols>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:primary_genre:nk]</cols>
+      </table>
+      <simple-id uuid='{E29FB2D3-2E32-4242-B853-92543C4C4E56}' />
+    </worksheet>
+    <worksheet name='High-Value Customer Segmentation'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='spotify_cleaned' name='federated.1xeyded0ma2om11d6i3dn0w7z5kn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xeyded0ma2om11d6i3dn0w7z5kn'>
+            <column caption='Premium Conversion Rate' datatype='real' name='[Calculation_2104588413124972544]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([premium_yes])' />
+            </column>
+            <column-instance column='[segment_label]' derivation='None' name='[none:segment_label:nk]' pivot='key' type='nominal' />
+            <column caption='Premium Yes' datatype='integer' name='[premium_yes]' role='measure' type='quantitative' />
+            <column caption='Segment Label' datatype='string' name='[segment_label]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2104588413124972544]' derivation='User' name='[usr:Calculation_2104588413124972544:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:segment_label:nk]' member='&quot;Segment 0&quot;' />
+              <groupfilter function='member' level='[none:segment_label:nk]' member='&quot;Segment 1&quot;' />
+              <groupfilter function='member' level='[none:segment_label:nk]' member='&quot;Segment 2&quot;' />
+              <groupfilter function='member' level='[none:segment_label:nk]' member='&quot;Segment 3&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]' value='92' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[usr:Calculation_2104588413124972544:qk]</rows>
+        <cols>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]</cols>
+      </table>
+      <simple-id uuid='{C76E1EC9-D0AB-4D6B-B45E-7024D7D1125C}' />
+    </worksheet>
+    <worksheet name='Premium Conversion Levers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='spotify_cleaned' name='federated.1xeyded0ma2om11d6i3dn0w7z5kn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xeyded0ma2om11d6i3dn0w7z5kn'>
+            <column caption='Premium Conversion Rate' datatype='real' name='[Calculation_2104588413124972544]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([premium_yes])' />
+            </column>
+            <column caption='Rec Rating Group' datatype='string' name='[Calculation_2104588413125214209]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [music_recc_rating] &gt;= 4 THEN &apos;High (4-5)&apos; ELSE &apos;Low/Neutral (1-3)&apos; END' />
+            </column>
+            <column caption='Music Recc Rating' datatype='integer' name='[music_recc_rating]' role='measure' type='quantitative' />
+            <column caption='Music Time Slot' datatype='string' name='[music_time_slot]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2104588413125214209]' derivation='None' name='[none:Calculation_2104588413125214209:nk]' pivot='key' type='nominal' />
+            <column-instance column='[music_time_slot]' derivation='None' name='[none:music_time_slot:nk]' pivot='key' type='nominal' />
+            <column caption='Premium Yes' datatype='integer' name='[premium_yes]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2104588413124972544]' derivation='User' name='[usr:Calculation_2104588413124972544:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:music_time_slot:nk]' direction='DESC' using='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[usr:Calculation_2104588413124972544:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125214209:nk]' value='151' />
+            <format attr='width' field='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:music_time_slot:nk]' value='117' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:music_time_slot:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[usr:Calculation_2104588413124972544:qk]</rows>
+        <cols>([federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125214209:nk] / [federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:music_time_slot:nk])</cols>
+      </table>
+      <simple-id uuid='{BCB79DD7-CC0D-4FD2-888E-CF14442A96AB}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Audio Market Analysis'>
+      <style />
+      <size maxheight='800' maxwidth='1600' minheight='800' minwidth='1600' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='99000' x='500' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='89000' x='500' y='1000'>
+              <zone h='49000' id='3' name='Premium Conversion Levers' w='44506' x='44994' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='98000' id='9' name='High-Value Customer Segmentation' w='44494' x='500' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='11' name='Content &amp; Product' w='44506' x='44994' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='10000' x='89500' y='1000'>
+              <zone h='14250' id='8' name='Premium Conversion Levers' pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:music_time_slot:nk]' type-v2='color' w='10000' x='89500' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14250' id='10' name='High-Value Customer Segmentation' pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]' type-v2='color' w='10000' x='89500' y='15250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9000' id='12' name='Content &amp; Product' pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]' type-v2='color' w='10000' x='89500' y='29500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9000' id='13' name='Content &amp; Product' pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]' type-v2='size' w='10000' x='89500' y='38500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='15' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='14' param='vert' type-v2='layout-flow' w='99000' x='500' y='1000'>
+                <zone fixed-size='280' h='98000' id='9' is-fixed='true' name='High-Value Customer Segmentation' w='44494' x='500' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14250' id='10' name='High-Value Customer Segmentation' pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]' type-v2='color' w='10000' x='89500' y='15250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Premium Conversion Levers' w='44506' x='44994' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14250' id='8' name='Premium Conversion Levers' pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:music_time_slot:nk]' type-v2='color' w='10000' x='89500' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='11' is-fixed='true' name='Content &amp; Product' w='44506' x='44994' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9000' id='12' name='Content &amp; Product' pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]' type-v2='color' w='10000' x='89500' y='29500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9000' id='13' name='Content &amp; Product' pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]' type-v2='size' w='10000' x='89500' y='38500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A0ED826E-2877-49B7-8A15-212874AB96E4}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Premium Conversion Levers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:music_time_slot:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125214209:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{61B6C2F2-56E7-40A1-B5C1-E74031999DF4}' />
+    </window>
+    <window class='worksheet' name='High-Value Customer Segmentation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{88E33A6D-5338-45EA-B262-32B245C9600C}' />
+    </window>
+    <window class='worksheet' name='Content &amp; Product'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]</field>
+            <field>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:primary_genre:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E38672F0-4370-4085-95E1-7B4215DE20C6}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Audio Market Analysis'>
+      <viewpoints>
+        <viewpoint name='Content &amp; Product'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:Calculation_2104588413125349378:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='High-Value Customer Segmentation'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1xeyded0ma2om11d6i3dn0w7z5kn].[none:segment_label:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Premium Conversion Levers'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview visible='true' />
+      <simple-id uuid='{0AB127C0-DD4A-42BE-9E43-02E4801C87C3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Audio Market Analysis' width='192'>
+      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
+      g43dv1zs2/8HHsMnCpULWYkAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Content &amp; Product' width='192'>
+      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
+      kZofNOAAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='High-Value Customer Segmentation' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Premium Conversion Levers' width='192'>
+      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
+      tINe/j/Z7pHbnS/O0wAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
