@@ -1,28 +1,51 @@
 # User Data Quality & Conversion Analytics Dashboard
 
-Tableau-first analytics project for profiling 28K+ Spotify user records, identifying data quality gaps, and explaining behavioral indicators linked to premium conversion.
+Tableau-first analytics project analyzing 28K+ Spotify user interaction records to identify data quality issues, behavioral patterns, and conversion signals associated with premium subscription intent.
+
+## Project Summary
+
+This project presents a stakeholder-ready Tableau analytics workflow supported by Python-generated extracts and SQL validation checks. The analysis focuses on four questions:
+
+- Which user segments show the strongest premium conversion intent?
+- Which plan, listening, recommendation, genre, and device patterns explain conversion differences?
+- Are the core reporting fields complete and valid enough for stakeholder reporting?
+- What actions can be recommended from the observed user interaction data?
 
 ## Main Deliverable
 
-Open this workbook in Tableau:
+The primary deliverable is the Tableau workbook:
 
 ```text
 tableau/User_Data_Quality_Conversion_Analytics.twb
 ```
 
-The workbook is connected to the Tableau-ready extract:
+Workbook contents:
 
-```text
-tableau/extracts/spotify_user_conversion_fact.csv
-```
+- 13 Tableau worksheets.
+- 5 analytical Tableau dashboards.
+- 1 Tableau storyboard dashboard.
+- Connected extracts for KPI, conversion, segment, quality, genre, and device analysis.
 
-Current workbook state:
+## Key Metrics
 
-- The existing workbook has 3 starter worksheets and 1 starter dashboard.
-- The connected extracts support the full story build.
-- The target portfolio build should be 12+ worksheets, 5 dashboards, and 1 Tableau Story.
+- Total records analyzed: `28,546`
+- Premium conversion intent: `43.9%`
+- High-intent users: `3,065`
+- High-intent conversion rate: `49.9%`
+- Data completeness rate: `93.5%`
 
-## Project Structure
+## Analytical Views
+
+The workbook is organized around:
+
+- Executive KPI overview.
+- Premium conversion by plan, listening frequency, recommendation rating, and time slot.
+- Segment-wise premium conversion and customer profile analysis.
+- Data quality validation checks for completeness, rating bounds, and binary target consistency.
+- Genre demand and device footprint analysis.
+- Recommendation-oriented dashboard views for stakeholder storytelling.
+
+## Repository Structure
 
 ```text
 spotify-analysis/
@@ -35,6 +58,7 @@ spotify-analysis/
 |   `-- music-analysis.ipynb
 |-- reports/
 |   |-- figures/viz_*.png
+|   |-- tableau_exports/
 |   `-- quality/data_quality_report.md
 |-- sql/
 |   `-- validation_checks.sql
@@ -60,67 +84,49 @@ spotify-analysis/
         `-- data_quality_checks.csv
 ```
 
-## Rebuild Tableau Extracts
+## Data Pipeline
 
-```bash
-python src/pipeline/build_tableau_assets.py
-python src/pipeline/connect_tableau_sources.py
-```
+Python scripts in `src/pipeline/` generate Tableau-ready CSV extracts from the processed dataset:
 
-This creates:
+- `spotify_user_conversion_fact.csv`: fact-level analytical extract.
+- `kpi_summary.csv`: KPI metrics for dashboard cards.
+- `conversion_by_*.csv`: pre-aggregated conversion views.
+- `segment_scorecard.csv`: segment-wise conversion and profile summary.
+- `data_quality_checks.csv`: validation check output.
+- `top_genres.csv` and `device_mix.csv`: ranked distribution views.
 
-- `spotify_user_conversion_fact.csv` for the main Tableau workbook.
-- `kpi_summary.csv` for KPI cards.
-- `conversion_by_plan.csv`, `conversion_by_frequency.csv`, `conversion_by_recommendation_rating.csv`, and `conversion_by_time_slot.csv` for conversion lever charts.
-- `segment_scorecard.csv` for segment-wise conversion analysis.
-- `top_genres.csv` and `device_mix.csv` for content/product footprint charts.
-- `story_points.csv` for Tableau Story captions and narrative sequence.
-- `data_quality_checks.csv` for validation and exception reporting.
-- `reports/quality/data_quality_report.md` for GitHub documentation.
+## Data Quality Layer
 
-`connect_tableau_sources.py` wires those extracts into the workbook data pane so they appear as connected data sources when the `.twb` opens.
+The project includes a validation layer for:
 
-## Tableau Build Note
+- Required field completeness.
+- Recommendation rating bounds from 1 to 5.
+- Binary premium conversion target consistency.
+- Segment, plan, genre, and device reporting readiness.
 
-Tableau visual authoring must happen inside Tableau Desktop: build worksheets first, combine them into dashboards, then add dashboards to a Story.
-
-The KPI views are built from `tableau/extracts/kpi_summary.csv`, especially these metrics:
-
-- `Total user records`
-- `Premium conversion rate`
-- `High-intent users`
-- `Data completeness rate`
-
-Use this guide for the exact worksheet -> dashboard -> story build:
+Supporting files:
 
 ```text
-tableau/docs/tableau_story_build_plan.md
-```
-
-## Tableau Views
-
-The workbook is organized around:
-
-- Premium conversion levers by time slot and recommendation rating.
-- High-value customer segmentation.
-- Content, genre, and device/product usage views.
-- Data quality and validation support files for completeness and exception checks.
-
-Calculated field references are documented in:
-
-```text
+reports/quality/data_quality_report.md
+sql/validation_checks.sql
 tableau/docs/calculated_fields.md
 ```
 
-## SQL Support
+## Key Findings
 
-SQL validation checks are in:
+- Family, individual, and student plan cohorts show the strongest premium conversion rates, clustered around 49-50%.
+- Segment 0 is the strongest sampled segment, with 6,508 users and 49.1% conversion.
+- Context-specific listening responses underperform, indicating a need to separate frequency from listening occasion in future data collection.
+- Melody, rap, pop, and classical are the leading genre categories by record count.
+- Smart speakers, smartphones, laptops, and tablets form the dominant listening-device footprint.
 
-```text
-sql/validation_checks.sql
-```
+## Recommendations
 
-These checks mirror the data quality layer used for Tableau reporting.
+- Prioritize premium campaigns toward family, individual, and student plan cohorts.
+- Treat Segment 0 as the strongest initial audience for targeted premium messaging.
+- Standardize listening-frequency fields so frequency and listening occasion are not mixed.
+- Apply genre and device footprint patterns to campaign creative and product nudges.
+- Keep data quality checks visible in stakeholder reporting to make insights more defensible.
 
 ## Resume Framing
 
@@ -128,5 +134,4 @@ These checks mirror the data quality layer used for Tableau reporting.
 
 - Analyzed 28K+ user records to identify data patterns, inconsistent fields, and behavioral indicators linked to premium conversion.
 - Built a Tableau dashboard with KPI views for engagement, subscription conversion trends, segment-wise analysis, and data quality observations.
-- Defined analytical metrics and validation checks for clearer reporting, exception identification, and stakeholder-friendly storytelling.
-- Refined the analysis around plan conversion, listening frequency, recommendation ratings, segments, genre demand, device footprint, and data quality validation.
+- Defined analytical metrics and validation checks for clearer reporting, exception identification, and stakeholder-friendly data storytelling.
