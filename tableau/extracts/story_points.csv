@@ -1,0 +1,6 @@
+story_point,title,headline,caption,primary_extract
+1,Executive Overview,28K+ user records show a 43.9% premium intent baseline.,"Start with the KPI view: total user volume, premium intent, high-intent cohort, and data completeness.",kpi_summary.csv
+2,Conversion Levers,"Family, individual, and student plans show the strongest premium conversion signals.","Use plan, listening frequency, and recommendation rating views to identify where conversion is strongest.",conversion_by_plan.csv
+3,Segment and Data Quality,"Segment 0 is the strongest sampled segment, while validation checks support stakeholder trust.",Pair behavioral segmentation with completeness and validity checks to show that insights are backed by governed data.,segment_scorecard.csv
+4,Content and Device Footprint,"Melody, rap, and pop lead genre demand; smart speakers and smartphones lead listening footprint.",Close with content and device mix to translate analytics into product and campaign decisions.,top_genres.csv
+5,Recommended Actions,"Prioritize high-conversion plan cohorts, clean context-specific listening fields, and tailor campaigns by device footprint.","Close the story with practical next steps from the 28K-row dataset: target family/student/individual plan interest, improve ambiguous listening-frequency capture, and use genre/device mix for campaign planning.",story_points.csv

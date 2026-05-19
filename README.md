@@ -1,196 +1,132 @@
-# Spotify User Analysis: Premium Conversion Prediction
+# User Data Quality & Conversion Analytics Dashboard
 
-A comprehensive data science project analyzing Spotify user behavior to predict premium subscription conversion. This analysis combines exploratory data analysis, predictive modeling, and customer segmentation to drive business insights for music streaming platforms.
+Tableau-first analytics project for profiling 28K+ Spotify user records, identifying data quality gaps, and explaining behavioral indicators linked to premium conversion.
 
-## Project Overview
+## Main Deliverable
 
-This project builds an end-to-end data pipeline that:
-- **Cleans & engineers** user research data from Spotify
-- **Visualizes** key business metrics for strategic insights
-- **Predicts** which users are likely to convert to premium subscriptions
-- **Compares** multiple machine learning algorithms (Logistic Regression, Random Forest, XGBoost)
-- **Segments** users into behavioral clusters for targeted marketing
+Open this workbook in Tableau:
 
-## Business Context
+```text
+tableau/User_Data_Quality_Conversion_Analytics.twb
+```
 
-Music streaming platforms like JioSaavn and Spotify rely on converting free users to premium subscribers. This project addresses the core business question: **Who should we target for premium conversion, and what drives their decision?**
+The workbook is connected to the Tableau-ready extract:
 
-### Key Use Cases
-- **Targeted Marketing**: Identify high-conversion-likelihood users to prioritize ad spend
-- **Product Strategy**: Understand which features (recommendations, listening frequency) drive premiumization
-- **Pricing Strategy**: Tailor subscription offers by user segment and age group
-- **Revenue Forecasting**: Predict upgrade rates and ARPU (Average Revenue Per User) growth
+```text
+tableau/extracts/spotify_user_conversion_fact.csv
+```
+
+Current workbook state:
+
+- The existing workbook has 3 starter worksheets and 1 starter dashboard.
+- The connected extracts support the full story build.
+- The target portfolio build should be 12+ worksheets, 5 dashboards, and 1 Tableau Story.
 
 ## Project Structure
 
-```
+```text
 spotify-analysis/
-├── music-analysis.ipynb              # Main analysis notebook
-├── Spotify_user_research.xlsx        # Source data (user research)
-├── spotify_cleaned.csv               # Cleaned data snapshot
-├── spotify_cleaned_final.csv         # Final dataset with segments
-├── viz_*.png                         # Generated visualizations
-└── README.md                         # This file
+|-- data/
+|   |-- raw/Spotify_user_research.xlsx
+|   `-- processed/
+|       |-- spotify_cleaned.csv
+|       `-- spotify_cleaned_final.csv
+|-- notebooks/
+|   `-- music-analysis.ipynb
+|-- reports/
+|   |-- figures/viz_*.png
+|   `-- quality/data_quality_report.md
+|-- sql/
+|   `-- validation_checks.sql
+|-- src/
+|   `-- pipeline/
+|       |-- build_tableau_assets.py
+|       `-- connect_tableau_sources.py
+`-- tableau/
+    |-- User_Data_Quality_Conversion_Analytics.twb
+    |-- docs/calculated_fields.md
+    |-- docs/tableau_story_build_plan.md
+    `-- extracts/
+        |-- spotify_user_conversion_fact.csv
+        |-- kpi_summary.csv
+        |-- conversion_by_plan.csv
+        |-- conversion_by_frequency.csv
+        |-- conversion_by_recommendation_rating.csv
+        |-- conversion_by_time_slot.csv
+        |-- segment_scorecard.csv
+        |-- top_genres.csv
+        |-- device_mix.csv
+        |-- story_points.csv
+        `-- data_quality_checks.csv
 ```
 
-## Dataset
+## Rebuild Tableau Extracts
 
-**Source**: Spotify User Research Survey
-**Features Include**:
-- Demographics: Age, Gender
-- Device: Listening device (mobile, desktop, tablet)
-- Behavior: Listening frequency, preferred time slot, music genre
-- Satisfaction: Recommendation rating
-- Target: Premium subscription willingness (Yes/No)
-
-## Analysis Pipeline
-
-### 1. Data Cleaning & Feature Engineering
-- Standardize target variable: `premium_sub_willingness` → binary `premium_yes`
-- Normalize subscription plans (free, premium, family, student, etc.)
-- Extract primary music genre from multi-value fields
-- Handle missing values intelligently
-
-**Output**: `spotify_cleaned.csv`
-
-### 2. Exploratory Data Analysis (EDA)
-Generates 5 key visualizations:
-- **Top 10 Genres**: Content strategy insights (which genres to invest in)
-- **Time Slot Analysis**: Premium conversion rates by listening time
-- **Recommendation Impact**: Correlation between recommendation quality and willingness to pay
-- **Device Distribution**: Mobile-first usage patterns
-- **Age & Plan Mix**: Subscription preferences by demographic
-
-**Output**: PNG visualizations for dashboard integration
-
-### 3. Predictive Modeling
-
-#### Model Comparison: Three Algorithms
-1. **Logistic Regression** (Baseline)
-   - Interpretable, fast
-   - Good for understanding feature coefficients
-   
-2. **Random Forest** (Ensemble)
-   - Captures non-linear relationships
-   - Robust to outliers
-   
-3. **XGBoost** (Gradient Boosting)
-   - State-of-the-art performance
-   - Best for high-stakes predictions
-
-#### Evaluation Metrics
-- **AUC**: Overall discriminative ability
-- **Precision**: % of predicted converters who actually convert (minimize false positives)
-- **Recall**: % of actual converters we identify (minimize false negatives)
-- **F1-Score**: Harmonic mean balancing precision-recall
-
-**Outputs**:
-- Model comparison visualization
-- Feature importance rankings
-- Best model selection by AUC
-
-### 4. Customer Segmentation (K-Means)
-Clusters users into 4 behavioral segments based on:
-- Age group
-- Device preference
-- Listening time slot
-- Listening frequency
-- Current subscription plan
-
-**Segment Profiles**: Premium willingness, modal age, and device for each segment
-
-**Visualization**: PCA-reduced 2D visualization of clusters
-
-**Output**: `spotify_cleaned_final.csv` (includes segment assignments)
-
-## Key Findings
-
-### Model Performance
-| Model | AUC | Precision | Recall | F1-Score |
-|-------|-----|-----------|--------|----------|
-| Logistic Regression | 0.5824 | 0.4888 | 0.2352 | 0.3176 |
-| Random Forest | 0.5418 | 0.4825 | 0.3854 | 0.4285 |
-| XGBoost | 0.5621 | 0.4838 | 0.3814 | 0.4265 |
-
-*Run the notebook to see actual performance metrics*
-
-### Top Predictors of Premium Conversion
-1. Recommendation rating (positive correlation)
-2. Listening frequency (high engagement → higher conversion)
-3. Current subscription plan (already premium tiers)
-4. Device type (mobile users show different patterns)
-5. Age group (younger users more conversion-prone)
-
-## Getting Started
-
-### Prerequisites
 ```bash
-python 3.8+
+python src/pipeline/build_tableau_assets.py
+python src/pipeline/connect_tableau_sources.py
 ```
 
-### Installation
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn openpyxl xgboost
+This creates:
+
+- `spotify_user_conversion_fact.csv` for the main Tableau workbook.
+- `kpi_summary.csv` for KPI cards.
+- `conversion_by_plan.csv`, `conversion_by_frequency.csv`, `conversion_by_recommendation_rating.csv`, and `conversion_by_time_slot.csv` for conversion lever charts.
+- `segment_scorecard.csv` for segment-wise conversion analysis.
+- `top_genres.csv` and `device_mix.csv` for content/product footprint charts.
+- `story_points.csv` for Tableau Story captions and narrative sequence.
+- `data_quality_checks.csv` for validation and exception reporting.
+- `reports/quality/data_quality_report.md` for GitHub documentation.
+
+`connect_tableau_sources.py` wires those extracts into the workbook data pane so they appear as connected data sources when the `.twb` opens.
+
+## Tableau Build Note
+
+Tableau visual authoring must happen inside Tableau Desktop: build worksheets first, combine them into dashboards, then add dashboards to a Story.
+
+The KPI views are built from `tableau/extracts/kpi_summary.csv`, especially these metrics:
+
+- `Total user records`
+- `Premium conversion rate`
+- `High-intent users`
+- `Data completeness rate`
+
+Use this guide for the exact worksheet -> dashboard -> story build:
+
+```text
+tableau/docs/tableau_story_build_plan.md
 ```
 
-### Running the Analysis
-1. Open `music-analysis.ipynb` in Jupyter Notebook or VS Code
-2. Update `FILE_PATH` to point to your Spotify data Excel file
-3. Run cells sequentially (or run all)
-4. Visualizations will be saved as PNG files
+## Tableau Views
 
-```python
-FILE_PATH = "path/to/your/Spotify_user_research.xlsx"
+The workbook is organized around:
+
+- Premium conversion levers by time slot and recommendation rating.
+- High-value customer segmentation.
+- Content, genre, and device/product usage views.
+- Data quality and validation support files for completeness and exception checks.
+
+Calculated field references are documented in:
+
+```text
+tableau/docs/calculated_fields.md
 ```
 
-## Outputs
+## SQL Support
 
-### CSV Files
-- `spotify_cleaned.csv` - Cleaned data with engineered features
-- `spotify_cleaned_final.csv` - Final dataset with segment assignments
+SQL validation checks are in:
 
-### Visualizations (PNG)
-- `viz_top_genres.png` - Genre distribution
-- `viz_time_slot_premium.png` - Conversion by listening time
-- `viz_rec_vs_premium.png` - Recommendation impact
-- `viz_devices.png` - Device distribution
-- `viz_plan_age.png` - Subscription mix by age
-- `viz_model_comparison.png` - Algorithm performance comparison
-- `viz_feature_importance_comparison.png` - Feature importance (RF vs XGBoost)
-- `viz_segments.png` - User clusters visualization
+```text
+sql/validation_checks.sql
+```
 
-## Technical Highlights
+These checks mirror the data quality layer used for Tableau reporting.
 
-### Machine Learning
-- One-hot encoding for categorical variables
-- Stratified train-test split (maintains class balance)
-- StandardScaler normalization for distance-based models
-- Multiple algorithms comparison framework
+## Resume Framing
 
-### Data Engineering
-- Robust string parsing for multi-value fields
-- Intelligent missing value handling
-- Index-based segment mapping for scalability
+**User Data Quality & Conversion Analytics Dashboard - Github | Python, NumPy, Tableau, SQL**
 
-### Visualization
-- Professional matplotlib styling
-- Value labels on charts
-- PCA dimensionality reduction for cluster visualization
-
-## Recommendations
-
-1. **Priority Segment**: Target users with high recommendation ratings + high listening frequency
-2. **Product Focus**: Invest in recommendation algorithm quality (strongest conversion driver)
-3. **Monetization Timing**: Adjust premium offers based on listening time patterns
-4. **Mobile Strategy**: Optimize mobile experience (primary device for users)
-5. **Age-Based Pricing**: Consider tiered pricing for different age groups
-
-## Future Enhancements
-
-- [ ] Time series analysis (retention after upgrade)
-- [ ] A/B testing framework for promotion strategies
-- [ ] Cohort analysis for long-term LTV prediction
-- [ ] Regional customization (India-specific preferences)
-- [ ] Real-time deployment pipeline with FastAPI
-
-
+- Analyzed 28K+ user records to identify data patterns, inconsistent fields, and behavioral indicators linked to premium conversion.
+- Built a Tableau dashboard with KPI views for engagement, subscription conversion trends, segment-wise analysis, and data quality observations.
+- Defined analytical metrics and validation checks for clearer reporting, exception identification, and stakeholder-friendly storytelling.
+- Refined the analysis around plan conversion, listening frequency, recommendation ratings, segments, genre demand, device footprint, and data quality validation.
